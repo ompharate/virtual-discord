@@ -6,7 +6,7 @@ const Home = () => {
     <div className="text-red-500">
       <h1>Home Page</h1>
       <NavLink to={"/signup"}>signup</NavLink>
-      <NavLink to={"/login"}>signup</NavLink>
+      <NavLink to={"/login"}>Login</NavLink>
     </div>
   );
 };
