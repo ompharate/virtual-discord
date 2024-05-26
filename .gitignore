@@ -28,3 +28,4 @@ package-lock.json
 # Ignore virtual environment folders
 venv/
 env/
+node_modules/

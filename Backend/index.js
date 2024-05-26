@@ -1,11 +1,16 @@
 import express from "express";
+import "dotenv/config";
+import cors from "cors";
+import { userRouter } from "./Routes/userRoutes.js";
+import { dbConnection } from "./db_Connection/connection.js";
+
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 4000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
+app.use(cors());
+app.use(express.json());
+app.use("/api/user", userRouter);
+dbConnection();
 app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
 });
