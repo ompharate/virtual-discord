@@ -7,18 +7,6 @@ import logo from "../Images/logo.png";
 const Home = () => {
   return (
     <>
-      {/* <nav>
-        <a href="#">What is it ?</a>
-        <a href="#">Developers</a>
-
-        <a
-          href="#"
-          className="bg-gradient-to-r from-custom-blue-start to-custom-blue-end rounded-[10px]"
-        >
-          Login
-        </a>
-      </nav> */}
-
       <div className="bg-[#0d1026]">
         <header class="text-gray-600 body-font">
           <div class="container mx-auto flex flex-wrap px-10 py-[-10px] flex-col md:flex-row items-center">
