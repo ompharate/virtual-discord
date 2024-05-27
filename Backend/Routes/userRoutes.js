@@ -6,8 +6,9 @@ import {
   deleteUser,
   getUserById,
 } from "../Controllers/userController.js";
+import { authentication } from "../Middlewares/authentication.js";
 
 userRouter.post("/signup", createUser);
 userRouter.post("/login", loginUser);
-userRouter.get("/:userId", getUserById);
+userRouter.get("/:userId", authentication, getUserById);
 userRouter.delete("/delete/:userId", deleteUser);

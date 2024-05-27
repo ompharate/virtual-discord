@@ -55,24 +55,24 @@ export const loginUser = async (req, res) => {
 
     return res
       .status(200)
-      .cookie("token", token)
+      .cookie("token", token, { httpOnly: true })
       .json({ user, token, message: "user login successful" });
   } catch (error) {
     return res.status(500).json({ error: "internal server error" });
   }
 };
 
-export const getUserById = async(req, res)=>{
-    const userId = req.params.userId;
-    try {
-      const user = await userModel.findById(userId);
-      if (!user) return res.status(404).json({ error: "user not found" });
-      
-      return res.status(200).json({ user });
-    } catch (error) {
-      return res.status(500).json({ error: "internal server error" });
-    }
-}
+export const getUserById = async (req, res) => {
+  const userId = req.params.userId;
+  try {
+    const user = await userModel.findById(userId);
+    if (!user) return res.status(404).json({ error: "user not found" });
+
+    return res.status(200).json({ user });
+  } catch (error) {
+    return res.status(500).json({ error: "internal server error" });
+  }
+};
 
 export const deleteUser = async (req, res) => {
   const userId = req.params.userId;

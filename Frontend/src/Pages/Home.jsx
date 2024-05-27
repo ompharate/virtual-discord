@@ -28,6 +28,7 @@ const Home = () => {
                 Fourth Link
               </a>
             </nav>
+            <NavLink to={"/login"}>
             <button class="inline-flex items-center shadow-[1px_1px_10px_1px_rgb(17,_208,_250)]  bg-gradient-to-r text-white from-custom-blue-start to-custom-blue-end border-0 py-2 px-4 font-semibold focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
               Login
               <svg
@@ -42,6 +43,7 @@ const Home = () => {
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
             </button>
+            </NavLink>
           </div>
         </header>
         <div className="mt-8">
